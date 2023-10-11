@@ -17,7 +17,7 @@ object Reading extends App {
   )
 
   // Define the Kafka topic to subscribe to
-  val kafkaTopic = "FraudAPIaba"
+  val kafkaTopic = "MahmoodTopic"
 
   // Define the schema for the JSON messages
   val schema = StructType(Seq(
