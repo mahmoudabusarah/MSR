@@ -8,7 +8,7 @@ object Reading extends App {
 
   // Define the Kafka parameters
   val kafkaParams = Map(
-    "kafka.bootstrap.servers" -> "ip-172-31-13-101.eu-west-2.compute.internal:9092",
+    "kafka.bootstrap.servers" -> "ip-172-31-3-80.eu-west-2.compute.internal:9092",
     "key.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
     "value.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
     "group.id" -> "group1",
@@ -40,6 +40,6 @@ object Reading extends App {
 
 
   // Write the DataFrame as CSV files to HDFS
-  df.writeStream.format("csv").option("checkpointLocation", "/tmp/jenkins/kafkab").option("path", "/tmp/jenkins/kafkab/FraudApib").start().awaitTermination()
+  df.writeStream.format("csv").option("checkpointLocation", "/tmp/jenkins/Mahmoud/Kafka/").option("path", "/tmp/jenkins/Mahmoud/Kafka/FraudApib").start().awaitTermination()
 
 }
